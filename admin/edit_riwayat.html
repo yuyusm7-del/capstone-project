@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Riwayat Pengadaan</title>
+    <link rel="stylesheet" href="edit_riwayat.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="edit-card">
+        <h2 class="form-title">Edit Riwayat Pengadaan</h2>
+
+        <form id="edit-procurement-form">
+          <div class="input-group">
+            <label for="component_select">Komponen</label>
+            <select
+              id="component_select"
+              name="component_select"
+              required
+              disabled
+            >
+              <option value="Aluminum Alloy (Tongkat Baseball)">
+                Aluminum Alloy (Tongkat Baseball)
+              </option>
+            </select>
+          </div>
+
+          <div class="input-group-grid">
+            <div>
+              <label for="price">Harga Pengadaan</label>
+              <input
+                type="text"
+                id="price"
+                name="price"
+                value="300000"
+                required
+              />
+            </div>
+            <div>
+              <label for="date">Tanggal Transaksi</label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value="2025-08-17"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="input-group-grid">
+            <div>
+              <label for="kurs">Kurs saat Transaksi</label>
+              <input type="text" id="kurs" name="kurs" value="16000" required />
+            </div>
+            <div>
+              <label for="vendor">Vendor</label>
+              <input
+                type="text"
+                id="vendor"
+                name="vendor"
+                value="Vendor A/B/C"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="btn-batal"
+              onclick="window.history.back()"
+            >
+              Batal
+            </button>
+            <button type="submit" class="btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="custom-edit-procurement-success-modal" class="custom-modal">
+      <div class="modal-content">
+        <h3 class="modal-title success">Sukses</h3>
+        <p id="edit-procurement-success-message">Riwayat berhasil diubah!</p>
+        <div class="modal-actions">
+          <button
+            id="modal-edit-procurement-success-ok-btn"
+            class="btn-modal-ok"
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="edit_riwayat.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Estimator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../admin/dashboard.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-wrapper">
+      <!-- ========== SIDEBAR ========== -->
+      <aside class="sidebar estimator-sidebar" id="sidebar">
+        <div class="sidebar-logo-container">
+          <img
+            src="../assets/aclogo2.png"
+            alt="Accenture Logo"
+            class="sidebar-logo"
+          />
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul class="menu-top">
+            <li class="nav-item active" data-page="estimator_dashboard">
+              <img src="../assets/dashboard.png" class="nav-icon" />
+              <span>Dashboard</span>
+            </li>
+
+            <li class="nav-item" data-page="lihat_data_produk">
+              <img src="../assets/lihat_data.png" class="nav-icon" />
+              <span>Lihat Data Produk</span>
+            </li>
+
+            <li class="nav-item" data-page="hitung_estimasi">
+              <img src="../assets/hitung_estimasi.png" class="nav-icon" />
+              <span>Hitung Estimasi</span>
+            </li>
+
+            <li class="nav-item" data-page="hasil_estimasi">
+              <img src="../assets/hasil_estimasi.png" class="nav-icon" />
+              <span>Hasil Estimasi</span>
+            </li>
+
+            <li class="nav-item" data-page="laporan_ekspor">
+              <img src="../assets/laporan.png" class="nav-icon" />
+              <span>Laporan & Ekspor</span>
+            </li>
+          </ul>
+
+          <div class="logout-section">
+            <a href="#" class="logout-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- ========== MAIN CONTENT ========== -->
+      <main class="main-content">
+        <header class="main-header">
+          <div class="logo-area">
+            <div class="accenture-logo">
+              <span class="logo-text">accenture</span>
+              <div class="logo-shape">&gt;</div>
+            </div>
+          </div>
+
+          <h1 class="header-title">Dashboard Estimator</h1>
+
+          <div class="user-profile">
+            <div class="user-avatar">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <span class="user-role">Role User</span>
+          </div>
+        </header>
+
+        <!-- ===== BODY ===== -->
+        <section class="dashboard-body estimator-body">
+          <!-- Metric Cards -->
+          <div class="metrics-row estimator-metrics">
+            <div class="metric-card estimator-card">
+              <div class="card-content">
+                <span class="card-title">Produk Siap Estimasi</span>
+                <span class="card-value">128</span>
+              </div>
+              <div class="chart-line"></div>
+            </div>
+
+            <div class="metric-card estimator-card">
+              <div class="card-content">
+                <span class="card-title">Kurs JISDOR Terbaru</span>
+                <span class="card-value kurs-value">IDR 17.000</span>
+              </div>
+              <div class="chart-line"></div>
+            </div>
+
+            <div class="metric-card estimator-card">
+              <div class="card-content">
+                <span class="card-title">Estimasi Terakhir</span>
+                <span class="card-value">7</span>
+              </div>
+              <div class="chart-line"></div>
+            </div>
+          </div>
+
+          <!-- Buttons row -->
+          <div class="estimator-actions-row">
+            <button class="btn-action primary-action">Hitung Estimasi</button>
+            <button class="btn-action secondary-action">Hitung Estimasi</button>
+            <button class="btn-action tertiary-action">Hitung Estimasi</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="estimator_script.js"></script>
+  </body>
+</html>

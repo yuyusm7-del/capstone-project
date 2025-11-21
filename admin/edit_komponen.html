@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Komponen</title>
+    <link rel="stylesheet" href="edit_komponen.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="edit-card">
+        <h2 class="form-title">Edit Komponen</h2>
+
+        <form id="edit-component-form">
+          <div class="input-group">
+            <label for="product_select">Produk</label>
+            <select id="product_select" name="product_select" required disabled>
+              <option value="Tongkat Baseball">Tongkat Baseball</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="component_name">Nama Komponen</label>
+            <input
+              type="text"
+              id="component_name"
+              name="component_name"
+              value="Aluminium Alloy"
+              required
+            />
+          </div>
+
+          <div class="input-group-grid">
+            <div>
+              <label for="quantity">Kuantitas</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                value="20"
+                required
+              />
+            </div>
+            <div>
+              <label for="unit">Satuan</label>
+              <input type="text" id="unit" name="unit" value="Gram" required />
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="btn-batal"
+              onclick="window.history.back()"
+            >
+              Batal
+            </button>
+            <button type="submit" class="btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="custom-edit-component-success-modal" class="custom-modal">
+      <div class="modal-content">
+        <h3 class="modal-title success">Sukses</h3>
+        <p id="edit-component-success-message">Komponen berhasil diubah!</p>
+        <div class="modal-actions">
+          <button id="modal-edit-component-success-ok-btn" class="btn-modal-ok">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="edit_komponen.js"></script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manajemen Riwayat Pengadaan - Accenture</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  </head>
+
+  <body>
+    <div class="dashboard-wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo-container">
+          <img
+            src="../assets/aclogo2.png"
+            alt="Accenture Logo"
+            class="sidebar-logo"
+          />
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul class="menu-top">
+            <li class="nav-item" data-page="dashboard">
+              <img
+                src="../assets/dashboard.png"
+                alt="Dashboard Icon"
+                class="nav-icon"
+              />
+              <span>Dashboard</span>
+            </li>
+
+            <li class="nav-item" data-page="manajemen_produk">
+              <img
+                src="../assets/mproduk.png"
+                alt="Produk Icon"
+                class="nav-icon"
+              />
+              <span>Manajemen Produk</span>
+            </li>
+
+            <li class="nav-item" data-page="manajemen_komponen">
+              <img
+                src="../assets/mkomponen.png"
+                alt="Komponen Icon"
+                class="nav-icon"
+              />
+              <span>Manajemen Komponen</span>
+            </li>
+
+            <li class="nav-item active" data-page="riwayat_pengadaan">
+              <img
+                src="../assets/riwayat.png"
+                alt="Riwayat Icon"
+                class="nav-icon"
+              />
+              <span>Riwayat Pengadaan</span>
+            </li>
+
+            <li class="nav-item" data-page="kurs_jisdor">
+              <img src="../assets/kurs.png" alt="Kurs Icon" class="nav-icon" />
+              <span>Kurs JISDOR</span>
+            </li>
+
+            <li class="nav-item" data-page="manajemen_user">
+              <img src="../assets/user.png" alt="User Icon" class="nav-icon" />
+              <span>Manajemen User</span>
+            </li>
+
+            <li class="nav-item" data-page="audit_trail">
+              <img
+                src="../assets/audit.png"
+                alt="Audit Icon"
+                class="nav-icon"
+              />
+              <span>Audit Trail</span>
+            </li>
+          </ul>
+
+          <div class="logout-section">
+            <a href="#" class="logout-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div class="logo-area">
+            <div class="accenture-logo">
+              <span class="logo-text">accenture</span>
+              <div class="logo-shape">&gt;</div>
+            </div>
+          </div>
+
+          <h1 class="header-title">Manajemen Riwayat Pengadaan</h1>
+
+          <div class="user-profile">
+            <div class="user-avatar">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <span class="user-role">Role User</span>
+          </div>
+        </header>
+
+        <section class="dashboard-body">
+          <div class="procurement-controls">
+            <div class="filter-container">
+              <select
+                id="procurement-filter"
+                class="custom-select"
+                style="width: 250px"
+              >
+                <option value="">-- Filter per Produk --</option>
+              </select>
+            </div>
+
+            <div class="control-actions">
+              <button class="add-procurement-button">
+                <i class="fas fa-plus"></i>
+                Tambah Riwayat
+              </button>
+
+              <button class="export-csv-button">
+                Ekspor CSV
+                <i class="fas fa-file-csv"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="data-table-container">
+            <table class="product-table procurement-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%">KOMPONEN</th>
+                  <th style="width: 15%">HARGA</th>
+                  <th style="width: 15%">TANGGAL</th>
+                  <th style="width: 10%">KURS</th>
+                  <th style="width: 25%">VENDOR</th>
+                  <th style="width: 15%">AKSI</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Delete Modal -->
+    <div
+      id="custom-delete-modal"
+      class="custom-modal"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-content" role="document">
+        <h3>Konfirmasi Hapus</h3>
+        <p id="modal-message">Anda yakin ingin menghapus item ini?</p>
+        <div class="modal-actions">
+          <button id="modal-cancel-btn" class="btn-modal-batal">Batal</button>
+          <button id="modal-confirm-btn" class="btn-modal-hapus">Hapus</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div
+      id="custom-success-modal"
+      class="custom-modal"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-content" role="document">
+        <h3>Sukses</h3>
+        <p id="success-message">Operasi berhasil.</p>
+        <div class="modal-actions">
+          <button id="modal-success-ok-btn" class="btn-modal-ok">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

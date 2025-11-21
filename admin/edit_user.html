@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit User - Accenture</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="edit-card">
+        <h2 class="form-title">Edit User</h2>
+
+        <form id="edit-user-form">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value="Admin"
+              required
+              disabled
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="">Pilih Role</option>
+              <option value="Administrator" selected>Administrator</option>
+              <option value="Estimator">Estimator</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="status">Status</label>
+            <select id="status" name="status" required>
+              <option value="">Pilih Status</option>
+              <option value="Aktif" selected>Aktif</option>
+              <option value="Nonaktif">Nonaktif</option>
+            </select>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="btn-batal"
+              onclick="window.history.back()"
+            >
+              Batal
+            </button>
+            <button type="submit" class="btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="custom-edit-user-success-modal" class="custom-modal">
+      <div class="modal-content">
+        <h3 class="modal-title success">Sukses</h3>
+        <p id="edit-user-success-message">User berhasil diubah!</p>
+        <div class="modal-actions">
+          <button id="modal-edit-user-success-ok-btn" class="btn-modal-ok">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

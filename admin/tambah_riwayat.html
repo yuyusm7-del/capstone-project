@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Riwayat Pengadaan</title>
+    <link rel="stylesheet" href="tambah_riwayat.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="edit-card">
+        <h2 class="form-title">Tambah Riwayat Harga</h2>
+
+        <form id="add-procurement-form">
+          <div class="input-group">
+            <label for="component_select">Komponen</label>
+            <select id="component_select" name="component_select" required>
+              <option value="">-- pilih Komponen --</option>
+            </select>
+          </div>
+
+          <div class="input-group-grid">
+            <div>
+              <label for="price">Harga Pengadaan</label>
+              <input
+                type="text"
+                id="price"
+                name="price"
+                placeholder="300000"
+                required
+              />
+            </div>
+            <div>
+              <label for="date">Tanggal Transaksi</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+          </div>
+
+          <div class="input-group-grid">
+            <div>
+              <label for="kurs">Kurs saat Transaksi</label>
+              <input
+                type="text"
+                id="kurs"
+                name="kurs"
+                placeholder="16000"
+                required
+              />
+            </div>
+            <div>
+              <label for="vendor">Vendor</label>
+              <input
+                type="text"
+                id="vendor"
+                name="vendor"
+                placeholder="Vendor A/B/C"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="btn-batal"
+              onclick="window.history.back()"
+            >
+              Batal
+            </button>
+            <button type="submit" class="btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="custom-add-procurement-success-modal" class="custom-modal">
+      <div class="modal-content">
+        <h3 class="modal-title success">Sukses</h3>
+        <p id="add-procurement-success-message">
+          Riwayat berhasil ditambahkan!
+        </p>
+        <div class="modal-actions">
+          <button
+            id="modal-add-procurement-success-ok-btn"
+            class="btn-modal-ok"
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="tambah_riwayat.js"></script>
+  </body>
+</html>

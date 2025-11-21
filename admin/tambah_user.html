@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah User - Accenture</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="edit-card">
+        <h2 class="form-title">Tambah User</h2>
+
+        <form id="add-user-form">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Masukkan username"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Masukkan password"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="">Pilih Role</option>
+              <option value="Estimator" selected>Estimator</option>
+              <option value="Administrator">Administrator</option>
+            </select>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="btn-batal"
+              onclick="window.history.back()"
+            >
+              Batal
+            </button>
+            <button type="submit" class="btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="custom-add-user-success-modal" class="custom-modal">
+      <div class="modal-content">
+        <h3 class="modal-title success">Sukses</h3>
+        <p id="add-user-success-message">User berhasil ditambahkan!</p>
+        <div class="modal-actions">
+          <button id="modal-add-user-success-ok-btn" class="btn-modal-ok">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

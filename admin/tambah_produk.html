@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Produk Baru</title>
+    <link rel="stylesheet" href="tambah_produk.css" />
+  </head>
+
+  <body>
+    <div class="form-container">
+      <div class="edit-card">
+        <h2 class="form-title">Tambah Produk Baru</h2>
+
+        <form id="add-form">
+          <div class="input-group">
+            <label for="kode_produk">Kode Produk</label>
+            <input
+              type="text"
+              id="kode_produk"
+              name="kode_produk"
+              placeholder="contoh: PROD1"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="nama_produk">Nama Produk</label>
+            <input
+              type="text"
+              id="nama_produk"
+              name="nama_produk"
+              placeholder="contoh: Tongkat Baseball"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="deskripsi">Deskripsi</label>
+            <textarea
+              id="deskripsi"
+              name="deskripsi"
+              rows="4"
+              placeholder="Deskripsi singkat produk....."
+              required
+            ></textarea>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="btn-batal"
+              onclick="window.history.back()"
+            >
+              Batal
+            </button>
+
+            <button type="submit" class="btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="custom-add-success-modal" class="custom-modal">
+      <div class="modal-content">
+        <h3 class="modal-title success">Sukses</h3>
+        <p id="add-success-message">Produk berhasil ditambahkan!</p>
+
+        <div class="modal-actions">
+          <button id="modal-add-success-ok-btn" class="btn-modal-ok">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="tambah_produk.js"></script>
+  </body>
+</html>

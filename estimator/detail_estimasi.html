@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Hasil Estimasi</title>
+    <link rel="stylesheet" href="detail-estimasi.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="edit-card detail-card">
+        <h2 class="form-title" id="detail-title">
+          Detail Estimasi : [Nama Produk]
+        </h2>
+
+        <div class="metadata-section">
+          <p>
+            <strong>Tanggal :</strong>
+            <span id="detail-date">12/11/2025, 19:27:56</span>
+          </p>
+          <p>
+            <strong>Metode :</strong> <span id="detail-method">median</span>
+          </p>
+          <p>
+            <strong>Total :</strong>
+            <span id="detail-total">Rp 64.661.485,7</span>
+          </p>
+        </div>
+
+        <h3 class="rincian-title">Rincian Perhitungan :</h3>
+
+        <div class="data-table-container">
+          <table class="rincian-table">
+            <thead>
+              <tr>
+                <th style="width: 25%">KOMPONEN</th>
+                <th style="width: 25%">HARGA LAMA (AVG)</th>
+                <th style="width: 25%">KURS LAMA (AVG)</th>
+                <th style="width: 25%">HARGA NORMAL</th>
+              </tr>
+            </thead>
+            <tbody id="rincian-table-body"></tbody>
+          </table>
+        </div>
+
+        <div class="action-buttons">
+          <button
+            type="button"
+            class="btn-batal"
+            onclick="window.history.back()"
+          >
+            Batal
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="detail_estimasi.js"></script>
+  </body>
+</html>

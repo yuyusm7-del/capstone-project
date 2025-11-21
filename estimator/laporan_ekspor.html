@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan & Ekspor - Estimator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../admin/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <aside class="sidebar estimator-sidebar" id="sidebar">
+        <div class="sidebar-logo-container">
+          <img
+            src="../assets/aclogo2.png"
+            alt="Accenture Logo"
+            class="sidebar-logo"
+          />
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul class="menu-top">
+            <li class="nav-item" data-page="estimator_dashboard">
+              <img src="../assets/dashboard.png" class="nav-icon" />
+              <span>Dashboard</span>
+            </li>
+
+            <li class="nav-item" data-page="lihat_data_produk">
+              <img src="../assets/lihat_data.png" class="nav-icon" />
+              <span>Lihat Data Produk</span>
+            </li>
+
+            <li class="nav-item" data-page="hitung_estimasi">
+              <img src="../assets/hitung_estimasi.png" class="nav-icon" />
+              <span>Hitung Estimasi</span>
+            </li>
+
+            <li class="nav-item" data-page="hasil_estimasi">
+              <img src="../assets/hasil_estimasi.png" class="nav-icon" />
+              <span>Hasil Estimasi</span>
+            </li>
+
+            <li class="nav-item active" data-page="laporan_ekspor">
+              <img src="../assets/laporan.png" class="nav-icon" />
+              <span>Laporan & Ekspor</span>
+            </li>
+          </ul>
+
+          <div class="logout-section">
+            <a href="#" class="logout-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div class="logo-area">
+            <div class="accenture-logo">
+              <span class="logo-text">accenture</span>
+              <div class="logo-shape">&gt;</div>
+            </div>
+          </div>
+
+          <h1 class="header-title">Laporan & Ekspor</h1>
+
+          <div class="user-profile">
+            <div class="user-avatar"><i class="fas fa-user-tie"></i></div>
+            <span class="user-role">Role User</span>
+          </div>
+        </header>
+
+        <section class="dashboard-body report-body">
+          <h2 class="section-title">Konfigurasi Laporan</h2>
+
+          <form id="report-config-form">
+            <div class="report-group">
+              <label for="format-select">Format Laporan :</label>
+              <select id="format-select" class="custom-select-lg" required>
+                <option value="PDF">PDF / EXCEL</option>
+                <option value="PDF">PDF</option>
+                <option value="EXCEL">EXCEL</option>
+              </select>
+            </div>
+
+            <div class="report-group">
+              <label for="tipe-select">Tiper Laporan :</label>
+              <select id="tipe-select" class="custom-select-lg" required>
+                <option value="per_periode">
+                  Per Priode / Per Produk / Semua Estimasi
+                </option>
+                <option value="per_periode">Per Priode</option>
+                <option value="per_produk">Per Produk</option>
+                <option value="semua">Semua Estimasi</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              id="btn-download-report"
+              class="btn-action download-action"
+            >
+              Download Laporan
+            </button>
+          </form>
+
+          <p class="report-preview-text">
+            (Preview Laporan Akan Tampil Disini)
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="estimator_script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Komponen</title>
+    <link rel="stylesheet" href="tambah_komponen.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="edit-card">
+        <h2 class="form-title">Tambah Komponen Baru</h2>
+
+        <form id="add-component-form">
+          <div class="input-group">
+            <label for="product_select">Produk</label>
+            <select id="product_select" name="product_select" required>
+              <option value="">-- Pilih Produk -</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="component_name">Nama Komponen</label>
+            <input
+              type="text"
+              id="component_name"
+              name="component_name"
+              placeholder="contoh: Aluminium Alloy"
+              required
+            />
+          </div>
+
+          <div class="input-group-grid">
+            <div>
+              <label for="quantity">Kuantitas</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                placeholder="cth: 20"
+                required
+              />
+            </div>
+            <div>
+              <label for="unit">Satuan</label>
+              <input
+                type="text"
+                id="unit"
+                name="unit"
+                placeholder="cth: Gram"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button
+              type="button"
+              class="btn-batal"
+              onclick="window.history.back()"
+            >
+              Batal
+            </button>
+            <button type="submit" class="btn-simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="custom-add-component-success-modal" class="custom-modal">
+      <div class="modal-content">
+        <h3 class="modal-title success">Sukses</h3>
+        <p id="add-component-success-message">Komponen berhasil ditambahkan!</p>
+        <div class="modal-actions">
+          <button id="modal-add-component-success-ok-btn" class="btn-modal-ok">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="tambah_komponen.js"></script>
+  </body>
+</html>

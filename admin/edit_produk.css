@@ -1,0 +1,174 @@
+/* GLOBAL STYLES & LAYOUT */
+body {
+  background-color: #f7f7f7; /* Background abu-abu muda */
+  /* Hapus display: flex; di body */
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* KONTEN UTAMA FORM (Ini menggantikan gaya body sebelumnya) */
+.form-container {
+  /* Container form diletakkan di tengah layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.edit-card {
+  width: 500px;
+  padding: 30px;
+  background-color: white;
+  /* Border biru sesuai gambar */
+  border: 1px solid #1e90ff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Input Group Styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+  resize: vertical; /* Hanya izinkan resize vertikal untuk textarea */
+}
+
+/* Styling untuk Input yang Dinonaktifkan (Kode Produk) */
+.input-group input[disabled] {
+  background-color: #eee;
+  color: #555;
+  cursor: not-allowed;
+}
+
+/* Tombol Aksi */
+.action-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end; /* Rata kanan */
+  gap: 15px;
+}
+
+.action-buttons button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-batal {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-batal:hover {
+  background-color: #bbb;
+}
+
+.btn-simpan {
+  /* Warna ungu gelap sesuai tombol Simpan di gambar */
+  background-color: #5d3fd3;
+  color: white;
+}
+
+.btn-simpan:hover {
+  background-color: #4a2893;
+}
+
+/* ================================== */
+/* MODAL SUKSES (KUSTOM) */
+/* ================================== */
+
+/* ⭐ PERBAIKAN PENTING UNTUK MODAL OVERLAY ⭐ */
+.custom-modal {
+  position: fixed; /* Kunci: Memastikan modal menempel pada viewport */
+  z-index: 1000; /* Kunci: Pastikan di atas semua elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* Latar belakang semi-transparan */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Gunakan flex untuk memusatkan modal content */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content (Kotak Putih) */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  border: 1px solid #5d3fd3; /* Border ungu */
+}
+
+.modal-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-title.success {
+  color: #5cb85c; /* Hijau */
+}
+
+#edit-success-message {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Tombol OK Modal */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-modal-ok {
+  background-color: #5d3fd3; /* Ungu gelap */
+  color: white;
+}
+.btn-modal-ok:hover {
+  background-color: #4a2893;
+}
