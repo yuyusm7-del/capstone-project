@@ -697,10 +697,6 @@ body {
     padding: 10px;
   }
 
-  .menu-top {
-    display: flex;
-  }
-
   .nav-item {
     white-space: nowrap;
     flex-shrink: 0;
@@ -2048,5 +2044,43 @@ body {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* HANBURGER  */
+
+.menu-top.active {
+  display: flex;
+  flex-direction: column;
+}
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 20px;
+}
+
+.hamburger-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--text-dark);
+}
+
+/* MOBILE MODE */
+@media (max-width: 768px) {
+  .menu-top {
+    display: none;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  /* Tampilkan hamburger */
+  .hamburger-btn {
+    display: block;
+  }
+  .sidebar-logo-container {
+    justify-content: space-between;
+    align-items: center;
   }
 }
